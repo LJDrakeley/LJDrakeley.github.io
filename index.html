@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lewis' Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Home Page html -->
+  <section>
+    <div class="homeContainer">
+      <div class="red" id="myInfo" >
+          <h1 id="animated-name" style="margin-top: 1rem;"></h1>
+          <h3 id="animated-email"></h3>
+          <h4 id="animated-number"></h4>
+      </div>
+
+      <a class="white clickable" id="one" href="#portfolioContainer">
+        <h2>Portfolio</h2>
+      </a>
+
+      <a class="white clickable"  id="two" href="./pdf_files/Lewis_Drakeley_Resume.pdf" >
+        <h2>Resume</h2>
+      </a>
+      
+      <a class="white clickable" id="three" href="#photographyContainer" >
+        <div class="backgroundImage"></div>
+        <h2 class="title" id="photoTitle">Photography</h2>
+      </a>
+      <div class="blue"></div>
+      <a class="white clickable" id="four" href="#aboutMeContainer" style="writing-mode: vertical-lr;">
+        <h4>About me</h4>
+      </a>
+      <div class="white" id="five"></div>
+      <div class="yellow"></div>
+      <div class="black"></div>
+    </div>
+  </section>
+  
+
+  <!-- About Me Page html -->
+  <section>
+    <div class="aboutMeContainer" id="aboutMeContainer">
+        <div class="aboutMeImg"></div>
+        <div class="white aboutMeTitle"><h2 style="margin:0; padding:0;">About Me</h2></div>
+        <div class="red aboutMeTopRed"></div>
+        <div class="blue"></div>
+        <div class="white" style="grid-column: span 3;">
+          <p style="padding:0 0 0 1rem;"><strong>Hobbies:</strong> Photography, camping & driving!</p>
+          <p style="padding:0 0 0 1rem;"><strong>Pronouns:</strong> he/him/his</p>
+        </div>
+        <div class="yellow" style="grid-column: span 2;"></div>
+        <div class="white" style="grid-column: span 7;">
+          <p style="padding:1rem">
+            Hi! My name is Lewis Drakeley and I grew up in Wales, UK. 
+            I'm a huge fan of the countryside, and my favorite place in the world is the Mach Loop. 
+            I recently graduated from the University of Rochester where I followed my passion for physics and astronomy, 
+            and even took classes in psychology and American Sign Language. 
+            Here, I conducted research using the Dark Energy Spectroscopic Instrument (DESI) dataset, 
+            and even joined the university's rowing team. 
+            I hope to continue my journey in the United States and someday visit the Grand Canyon. 
+          </p>
+        </div>
+        <div class="red" style="grid-row: span 2;"></div>
+        <div class="yellow"></div>
+        <div class="lightBlue" style="grid-column: span 4;"></div>
+        <div class="black" style="grid-column: span 2;"></div>
+    </div>
+  </section>
+  
+
+  <!-- portfolio Page html -->
+  <section>
+    <div class="portfolioContainer" id="portfolioContainer">
+      <div class="lightBlue"></div>
+      <div class="blue portfolioTitle"><h1 style="margin:0; padding:0;">Portfolio</h1></div>
+      <div class="red"></div>
+      <div class="white slideshowClick" onclick="onSlideshowClick(direction='left')"><h1><</h1></div>
+      <div class="white slideshow">
+        <div class="list-item">
+          <h3>Aspen Salon</h3>
+          <img src="./portfolio_images/aspenSalonFrontPage.jpg" class="slideshowImage" alt="Aspen Salon website front page"/>  
+          <p>Fully developed website.</br>
+          view here: <a href="#">aspensalon.com</a></p>
+        </div>
+        <div class="list-item">
+          <h3>This Website!</h3>  
+          <p>Fully developed website showcasing my abilities in HTML, CSS and JavaScript. The design follows similar patterns to famous artist <strong>Piet Mondrian</strong>.</p>
+        </div>
+        <div class="list-item">
+          <h3>Drone Pilot (Java)</h3>
+          <img src="./portfolio_images/dronePilot.jpg" class="slideshowImage" id="dronePilotImage" alt="Drone Pilot game"/>  
+          <p>Java interactive game created to better understand Java graphics and Jcomponents. </br>
+          view here: <a href="https://github.com/LJDrakeley/Drone_Pilot">GitHub</a></p>
+        </div>
+        <div class="list-item">
+          <h3 style="margin-bottom:1rem;">The 15 Puzzle</h3>
+          <iframe src="./pdf_files/The_15_Puzzle_Abstract_Algebra.pdf" frameborder="0" style="width:80%; height:60%; border:none;"></iframe>
+          <p>
+            I discuss the breakdown and solve in its entirety the infamous 15 puzzle; a game that gained popularity in the US during the 1800s.
+          </p>
+        </div>
+        <div class="list-item">
+          <h3 style="margin-bottom:1rem;">Proplyd Scarcity</h3>
+          <iframe src="./pdf_files/Proplyd_Scarcity_Lewis_Drakeley.pdf" frameborder="0" style="width:80%; height:60%; border:none;"></iframe>
+          <p>
+            Here I discuss the transient nature of ionized protoplanetary disks, also known as proplyds, and a basic discusson on their formation. 
+          </p>
+        </div>
+      </div>
+      <div class="white slideshowClick" onclick="onSlideshowClick(direction='right')"><h1>></h1></div>
+      <div class="green"></div>
+      <div class="white slideshowCount">
+        <div class="phoneSlideshowClick" onclick="onSlideshowClick(direction='left')"><h1><</h1></div>
+        <div class="slideshow-counter" id="slideshowCounter"></div>
+        <div class="phoneSlideshowClick" onclick="onSlideshowClick(direction='right')"><h1>></h1></div>
+      </div>
+      <div class="black"></div>
+    </div>
+  </section>
+  
+  <!-- Photography Page HTML -->
+  <section>
+    <div class="photographyContainer" id="photographyContainer">
+      <div class="red phoneSize"></div>
+      <div class="blue phoneSize" style="grid-column: span 5;"></div>
+      <div class="green greenSize"></div> 
+      <div class="lightBlue photographyTitle" style="grid-column: span 3;"><h2>Astrophotography</h2></div>
+      <div class="yellow phoneSize" style="grid-column: span 2; grid-row: span 2;"></div>
+      <div class="white"></div>
+      <a class="photographyImage" id="astrophotography" href="https://sites.google.com/view/observational-astronomy-mees/home"></a>
+      <div class="red photographyTitle" style="grid-column: span 2;"><h2>Photography</h2></div>
+      <div class="white phoneSize" style="grid-row: span 2;"></div>
+      <a class="photographyImage" id="photography" href="https://sites.google.com/view/lewisdrakeleyphotography/home"></a>
+      <div class="white phoneSize" style="grid-column: span 2; grid-row: span 2;"></div>
+      <div class="blue phoneSize" style="grid-row: span 2;"></div>
+      <div class="black blackSize"></div>
+      <div class="white whiteSize"><p>Click on an image to view more.</p></div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
